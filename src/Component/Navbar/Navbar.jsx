@@ -1,13 +1,15 @@
 import React from 'react';
+import { FaGithub } from "react-icons/fa";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
-    const link= <>
-    <li><a>Home</a></li>
-    <li><a>App</a></li>
-    <li><a>Installation</a></li>
+    const link = <>
+        <li className='hero-text font-bold underline'><a>Home</a></li>
+        <li><a>App</a></li>
+        <li><a>Installation</a></li>
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm mb-6">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -15,20 +17,26 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[16px]">
                         {link}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl text-grad">HERO-IO</a>
+                <div className="flex items-center gap-2">
+                    <img className="w-[40px] h-[40px]" src={logo} alt="Logo" />
+                    <a className="hero-text text-2xl font-bold">
+                        HERO-IO
+                    </a>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                  {link}
+                <ul className="menu menu-horizontal px-1 text-[16px]">
+                    {link}
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn grad text-white"> <FaGithub></FaGithub>Contribute</a>
             </div>
+
         </div>
     );
 };

@@ -9,3 +9,9 @@
     rgba(159, 98, 242, 1) 100%
   );
 }
+.hero-text {
+  background: linear-gradient(90deg, #632ee3 0%, #9f62f2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

@@ -5,11 +5,19 @@ import App from './App.jsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Home from './Page/Home.jsx';
+import Banner from './Component/Banner/Banner.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    children: [
+      {
+        path: "/",
+        element: <Banner></Banner>
+
+      }
+    ]
   },
 ]);
 
